@@ -2,6 +2,9 @@
 
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
+    add_columm :places, :user_id, :integer
+    add_index :places, :user_id
+
     create_table :users do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
