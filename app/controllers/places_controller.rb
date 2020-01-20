@@ -8,9 +8,16 @@ class PlacesController < ApplicationController
     @place = Place.new
   end
 
+  def create
+    Place.create(place_params)
+    redirect_to root_path
+  end
 
-  def index
-  @place = Place.order("name").page(params[:page]).per_page(5)
-end
+  private
+
+  def place_params
+    params.require(:place).permit(:name, :description, :address)
+  end
+
 
 end
