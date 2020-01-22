@@ -68,6 +68,7 @@ gem 'bootstrap', '4.0.0.alpha6'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'geocoder'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -75,6 +76,5 @@ end
 
 gem 'will_paginate', '> 3.0'
 
-gem "geocoder"
 
 
