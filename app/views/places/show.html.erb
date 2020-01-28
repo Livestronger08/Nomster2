@@ -112,6 +112,8 @@
 
 <div class="row">
   <% @place.photos.each do |photo| %>
+
+  <%= image_tag photo.picture.url %>
       <div class="col-12 col-sm-6">
         <blockquote>
           <%= photo.caption %>
