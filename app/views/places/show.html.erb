@@ -113,8 +113,8 @@
 <div class="row">
   <% @place.photos.each do |photo| %>
 
-  <%= image_tag photo.picture.url %>
-      <div class="col-12 col-sm-6">
+  <%= image_tag photo.picture.to_s, class: "show-image-size" %>
+      <div class="col-12">
         <blockquote>
           <%= photo.caption %>
           <small><%= photo.user.email %></small>
