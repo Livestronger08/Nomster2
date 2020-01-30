@@ -5,10 +5,6 @@
   <br/><br/>
   <p><%= @place.description %></p>
 
-  </head>
-  <body>
-  <div id="map"></div>
-
 <% if @place.latitude.present? && @place.longitude.present? %>
 
   <script>
@@ -70,7 +66,7 @@
 </div>
 
 <div class="col-10 offset-1">
-  <h1 class="float-left">Comments</h1>
+  <h2>Comments</h2>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
     Add a comment
@@ -94,7 +90,7 @@
 </div>
 
 <div class="col-10 offset-1">
-  <h1 class="float-left">Pictures</h1>
+  <h2>Pictures</h2>
 <!--photo -->
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <div class="modal-body">
