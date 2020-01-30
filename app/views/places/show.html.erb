@@ -1,14 +1,10 @@
+<br /><br />
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
 
-  <style>
-    #map {
-      height: 300px;
-    }
-  </style>
   </head>
   <body>
   <div id="map"></div>
@@ -39,9 +35,6 @@
 
   <div id="map"></div>
 <% end %>
-
-<br />
-
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
@@ -100,8 +93,9 @@
   <% end %>
 </div>
 
+<div class="col-10 offset-1">
+  <h1 class="float-left">Pictures</h1>
 <!--photo -->
-
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <div class="modal-body">
    <%= f.input :caption %>
